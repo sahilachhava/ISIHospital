@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Get Appointment :: ISI Hospital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png">
+
+    <!-- pre-loaded css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+
+    <!-- custom made css -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+
+    <div id="wrapper" class="wrapper">
+
+        <!-- Header Area Start Here -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-12 col-md-12 col-12 headerTopbar">
+                        <ul>
+                            <li><i class="fas fa-phone"></i>Call: +1 (123) 456789</li>
+                            <li><i class="fas fa-map-marker-alt"></i>Montreal, Canada</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 d-none d-xl-block">
+                        <ul class="headerTopbarSocial">
+                            <li><a href="https://www.facebook.com/" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a></li>
+                            <li><a href="https://www.twitter.com/"  target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a> </li>
+                            <li><a href="https://www.instagram.com/"  target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+             <div class="headerMenu headerMenuStyle">
+                <div class="container">
+                    <div class="row">
+                            <a href="index.html">
+                                <img src="assets/img/logo.png" alt="logo" class="mainLogo">
+                            </a>
+                            <div class="mainMenu">
+                                <nav id="dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="index.html">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="aboutus.html">About us</a>
+                                        </li>
+                                        <li>
+                                            <a href="departments.html">Departments</a>
+                                        </li>
+                                        <li>
+                                            <a href="doctors.html">Doctors</a>
+                                        </li>
+                                        <li>
+                                            <a href="gallery.html">Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">Contact us</a>
+                                        </li>
+                                        <li class="loginStatus">
+                                        </li>
+                                        <li>
+                                            <a href="getAppointment.html" class="appointmentBtn">Get Appoinment</a>
+                                        </li>
+                                    </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Area End Here -->
+
+        <!-- Appointment Area Start Here -->
+        <div class="container">
+            <div class="row" style="margin-top: 115px;">
+                <div class="col-lg-8">
+                    <div>
+                        <h3 style="margin-bottom: 20px;">Book New Appointment</h3>
+                        <form onsubmit="bookAppointment();return false;" method="post">
+                            <div class="row">
+
+                                <div class="col-md-6 form-group">
+                                    <input type="text" placeholder="Patient First Name *" class="form-control textBox" name="fName" id="fName" required>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <input type="text" placeholder="Patient Last Name *" class="form-control textBox" name="lName" id="lName" required>
+                                </div>
+
+                                <div class="col-md-6 form-group emailField">
+                                    <input type="email" placeholder="E-mail *" class="form-control textBox" name="email" id="email" required>
+                                </div>
+
+                                <div class="col-md-6 form-group phoneField">
+                                    <input type="text" placeholder="Phone *" class="form-control textBox" name="phone" id="phone" required>
+                                </div>
+
+                                <div class="col-12 form-group">
+                                    <select class="select doctorsList" name="doctor" id="doctor" required>
+                                        <option value="">Select Doctor *</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <input type="date" class="form-control textBox" name="date" id="date" required>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <input type="text" class="form-control textBox" placeholder="Day of Appointment" name="day" id="day" required disabled>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <select class="select" name="time" id="time" required>
+                                        <option value="">Select Time Slot *</option>
+                                        <option value="1">Slot 1: 8:00am to 10:00am</option>
+                                        <option value="2">Slot 2: 10:00am to 12:00pm</option>
+                                        <option value="3">Slot 3: 12:00pm to 02:00pm</option>
+                                        <option value="4">Slot 4: 02:00pm to 04:00pm</option>
+                                        <option value="5">Slot 5: 04:00pm to 06:00pm</option>
+                                        <option value="6">Slot 6: 06:00pm to 08:00pm</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 form-group">
+                                    <textarea placeholder="Purpose of appointment *" name="message" id="purpose" rows="7" cols="20" required></textarea>
+                                </div>
+
+                                <div class="col-12 form-group" style="margin-bottom: 30px;">
+                                    <button type="submit" class="item-btn buttonName">Register & Book Appointment</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 appointmentImage">
+                    <img src="assets/img/image6.png" alt="" />
+                </div>
+            </div>
+        </div>
+    <!-- Appointment Area End Here -->
+
+     <!-- banner section start here-->
+     <section class="aboutBannerSection">
+        <div class="container">
+        <div class="row">
+            <div class="aboutBannerBody">
+                <h2 class="item-title">We Are Certified Award Winning Hospital.</h2>
+            </div>
+            <div class="aboutBannerImage">
+                <img src="assets/img/bottomImage.png" alt="brand">
+            </div>
+        </div>
+        </div>
+        </section>
+        <!-- banner section end here-->
+
+        <!-- Footer Area Start Here -->
+        <footer>
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+                        
+                        <!-- About Hospital -->
+                        <div class="footerBody sectionOne">
+                            <div class="footerLogoSection">
+                                <img src="assets/img/logo.png" alt="logo" class="img-fluid footerLogo">
+                            </div>
+                            <div class="footerContactPart">
+                                <ul style="list-style-type: none;">
+                                    <li><i class="fas fa-map-marker-alt"></i>Montreal, Canada</li>
+                                    <li><i class="fas fa-phone"></i>+1 (123) 456789</li>
+                                    <li><i class="far fa-envelope"></i>info@isihospital.com</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Our Departments -->
+                        <div class="footerBody sectionTwo">
+                        <div class="footerLogoSection">
+                        <div class="footerHeader">
+                            <h3>Departments</h3>
+                        </div>
+                        <div class="footerDepartments">
+                            <ul>
+                                <li><a href="departments.html">Dental Care</a></li>
+                                <li><a href="departments.html">Orthopedic</a></li>
+                                <li><a href="departments.html">Cardiology</a></li>
+                                <li><a href="departments.html">Hepatology</a></li>
+                                <li><a href="departments.html">Neurology</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                        </div>
+
+                        <!-- Page Links -->
+                        <div class="footerBody sectionThree">
+                        <div class="footerLogoSection">
+                        <div class="footerHeader">
+                        <h3>Quick Links</h3>
+                        </div>
+                        <div class="footerDepartments">
+                        <ul>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="departments.html">Our Departments</a></li>
+                            <li><a href="doctors.html">Our Doctors</a></li>
+                            <li><a href="getAppointment.html">Get Appointment</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                        </div>
+                        </div>
+                        </div>
+
+                        <!-- Opening hours -->
+                        <div class="footerBody">
+                        <div class="footerLogoSection">
+                        <div class="footerHeader">
+                            <h3>Opening Hours</h3>
+                        </div>
+                        <div class="openingHours">
+                            <ul>
+                                <li>Mon - Tue: 9.00am - 06.00pm</li>
+                                <li>Wed - Thur: 9.00am - 06.00pm</li>
+                                <li>Friday: 9.00am - 03.30pm</li>
+                                <li>Saturday: 9.00am - 01.30pm</li>
+                                <li>Sunday:<span> Closed</span></li>
+                            </ul>
+                        </div>
+                        </div>
+                        </div>
+
+                        <!-- add more footer content if you want -->
+
+                    </div>
+                </div>
+            </section>
+            <section class="footerBottom">
+                <h6>Copyright @ 2020 ISI Hospital. All Rights Reserved.</h6>
+            </section>
+        </footer>
+        <!-- Footer Area End Here -->
+        
+    </div>
+
+    <!-- pre-loaded js -->
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="assets/js/custom.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        //Hiding Email,Phone Fields from Form if user logged in
+        var status = localStorage.getItem("hasLoggedIn");
+        if(status == 1){
+            $('.emailField').css('display', 'none');
+            $('.phoneField').css('display', 'none');
+            document.getElementsByClassName('buttonName')[0].innerHTML = "Book Appointment";
+
+            var allMNos = localStorage.getItem('patientMNo').split(",");
+            var allEmails = localStorage.getItem('patientUsername').split(",");
+            var userID = localStorage.getItem("loginID");
+
+            for(var i = 0; i < allMNos.length; i++){
+                if(allEmails[i] == userID){
+                    //setting current user email, phone
+                    document.getElementById('email').value = userID;
+                    document.getElementById('phone').value = allMNos[i];
+                    break;
+                } 
+            }
+        }
+
+        //getting doctors data from local storage
+        var allNames = localStorage.getItem('docName').split(",");
+        var allSpeciality = localStorage.getItem('docSpeciality').split(",");
+        var currentDate = new Date();
+
+        //weekday 
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        //setting current date as value and min also
+        document.getElementById('date').valueAsDate = currentDate;
+        document.getElementById('date').min = document.getElementById('date').value;
+        document.getElementById('day').value = weekday[currentDate.getDay()];
+
+        $( "#date" ).change(() => {
+            var selectedDate = document.getElementById('date').valueAsDate;
+            document.getElementById('day').value = weekday[selectedDate.getDay()];
+        });
+
+        for(var i = 0; i < allNames.length; i++){
+            $('.doctorsList').append(
+                '<option value="'+i+'">'+allNames[i] +' - '+ allSpeciality[i] +'</option>'
+            );
+        }
+    </script>
+    <script>
+        //getting login status 
+        var status = localStorage.getItem("hasLoggedIn");
+
+        function bookAppointment(){
+            //getting all the data from form
+            var fName = document.getElementById('fName').value;
+            var lName = document.getElementById('lName').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var doctor = document.getElementById('doctor').value;
+            var date = document.getElementById('date').value;
+            var day = document.getElementById('day').value;
+            var timeSlot = document.getElementById('time').value;
+            var purpose = document.getElementById('purpose').value;
+
+            //getting current data from localStorage
+            var allFNames = localStorage.getItem('personFName').split(",");
+            var allLNames = localStorage.getItem('personLName').split(",");
+            var allEmails = localStorage.getItem('personEmail').split(",");
+            var allMobNo = localStorage.getItem('personMNo').split(",");
+            var allDoctors = localStorage.getItem('doctorID').split(",");
+            var allDates = localStorage.getItem('apDate').split(",");
+            var allDays = localStorage.getItem('apDay').split(",");
+            var allTimeSlots = localStorage.getItem('apTime').split(",");
+            var allPurpose = localStorage.getItem('apPurpose').split(",");
+
+            //appending new values
+            allFNames.push(fName);
+            allLNames.push(lName);
+            allEmails.push(email);
+            allMobNo.push(phone);
+            allDoctors.push(doctor);
+            allDates.push(date);
+            allDays.push(day);
+            allTimeSlots.push(timeSlot);
+            allPurpose.push(purpose);
+
+            //adding to localstorage
+            localStorage.setItem('personFName', allFNames);
+            localStorage.setItem('personLName', allLNames);
+            localStorage.setItem('personEmail', allEmails);
+            localStorage.setItem('personMNo', allMobNo);
+            localStorage.setItem('doctorID', allDoctors);
+            localStorage.setItem('apDate', allDates);
+            localStorage.setItem('apDay', allDays);
+            localStorage.setItem('apTime', allTimeSlots);
+            localStorage.setItem('apPurpose', allPurpose);
+
+            //if user is not logged in, then registering user
+            if(status != 1){
+                regiterUser(fName, lName, email, phone);
+                alert("Your account has been created & appointment has been booked. \n\nAccount Details:\nUser Email: " + email + "\nDefault Password: 5555\n\nLogin in now....");
+                window.location.href = "login.html";
+            }else{
+                alert(fName + " " + lName + "'s appointment has been booked.\n\nRedirecting you....");
+                window.location.href = "myAccount.html";
+            }
+        }
+
+        function regiterUser(fName, lName, email, phone){
+            var defaultPassword = "5555";
+            var allFNames = localStorage.getItem('patientFName').split(",");
+            var allLNames = localStorage.getItem('patientLName').split(",");
+            var allEmails = localStorage.getItem('patientUsername').split(",");
+            var allMobNo = localStorage.getItem('patientMNo').split(",");
+            var allPass = localStorage.getItem('patientPassword').split(",");
+
+            //Adding data in local storage
+            allFNames.push(fName);
+            allLNames.push(lName);
+            allEmails.push(email);
+            allMobNo.push(phone);
+            allPass.push(defaultPassword);
+
+            //storing data in local storage
+            localStorage.setItem('patientFName', allFNames);
+            localStorage.setItem('patientLName', allLNames);
+            localStorage.setItem('patientUsername', allEmails);
+            localStorage.setItem('patientMNo', allMobNo);
+            localStorage.setItem('patientPassword', allPass);
+        }
+    </script>
+
+</body>
+</html>
