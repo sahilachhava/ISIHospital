@@ -16,17 +16,17 @@ Patient  | harman@gmail.com | 5555
 
 _Home_<br />
 
-![Homepage](https://github.com/sahilachhava/SocialSpark/blob/master/screenshots/home1.png)
-![Homepage](https://github.com/sahilachhava/SocialSpark/blob/master/screenshots/home.png)<br />
+![Homepage](https://github.com/sahilachhava/ISIHospital/blob/master/screenshots/home1.png)
+![Homepage](https://github.com/sahilachhava/ISIHospital/blob/master/screenshots/home.png)<br />
 
 _About_<br />
 
-![Homepage](https://github.com/sahilachhava/SocialSpark/blob/master/screenshots/about.png)<br />
+![Homepage](https://github.com/sahilachhava/ISIHospital/blob/master/screenshots/about.png)<br />
 
 _Department_<br />
 
-![Homepage](https://github.com/sahilachhava/SocialSpark/blob/master/screenshots/department.png)<br />
+![Homepage](https://github.com/sahilachhava/ISIHospital/blob/master/screenshots/department.png)<br />
 
 _Doctors_<br />
 
-![Homepage](https://github.com/sahilachhava/SocialSpark/blob/master/screenshots/doctors.png)<br />
+![Homepage](https://github.com/sahilachhava/ISIHospital/blob/master/screenshots/doctors.png)<br />
