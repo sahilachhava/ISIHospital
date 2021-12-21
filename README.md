@@ -1,9 +1,8 @@
 # ISIHospital
 
 **Developed in 2020** <br />
-for college project <br /><br />
 
-*This hospital website is for my college project, In this patients can book appointments with doctors and see hospital information*<br />
+*Hospital website is developed for learning purpose, In this patients can book appointments with doctors and see hospital information*<br />
 
 **Demo User IDs**
 User Type | Email | Password
